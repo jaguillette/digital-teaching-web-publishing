@@ -1,0 +1,348 @@
+<html>
+	<head>
+		<title>Omeka</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css">
+		<link rel="stylesheet" href="css/fontawesome/fontawesome.css">
+		<link rel="stylesheet" href="css/fontawesome/light.css">
+		<style media="screen">
+			sup.url-aside {
+				font-style: italic;
+				font-size: 18;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+          <h1>Omeka</h1>
+          <p>Jeremy Guillette<br/>History Department<br/>Digital Scholarship Facilitator</p>
+        </section>
+				<section>
+					<h2>Overview</h2>
+					<ul>
+						<li>What is Omeka?</li>
+						<li>Core components
+							<ul>
+								<li>Items</li>
+								<li>Collections</li>
+								<li>Exhibits</li>
+							</ul>
+						</li>
+						<li>Add-on features
+							<ul>
+								<li>Mapping with Neatline</li>
+								<li>Image reuse via IIIF</li>
+							</ul>
+						</li>
+					</ul>
+					<aside class="notes">
+						So, here's what I'll be talking about for the next hour or so. First, I'm going to tell you what Omeka is, and talk about how it's been used here at Harvard. This is the part where I'll tell you why and under what circumstances you should care about Omeka. Then I'll talk about how Omeka thinks about and wants you to structure your information. We'll get hands on in this portion on a demo site that I've set up for you. Then I'll talk to you about a few of the features that have been added to Omeka as plugins: Neatline maps and image reuse with IIIF.
+					</aside>
+				</section>
+				<section>
+					<section>
+						<h1>What is Omeka?</h1>
+						<aside class="notes">
+							How many of you are familiar with Omeka? Well for those of you who aren't, here's a brief overview of where Omeka fits into the landscape of content management systems and web publishing.
+						</aside>
+					</section>
+					<section>
+						<h2>Content Management System</h2>
+						<p>e.g. Wordpress, Drupal, SquareSpace, etc.</p>
+						<aside class="notes">
+							In order to do that, I should talk about what a content management system is. Unsurprisingly, it's a system to help you manage your content on the web. What that means in practice is that it's the system that creates a structure around your content, your text, images, videos, etc., allowing you to pick a setup once, and then only focus on your content, and not the presentation around it.
+						</aside>
+					</section>
+					<section>
+						<i class="fal fa-building fa-3x"></i>&nbsp;&nbsp;&nbsp;
+						<i class="fal fa-hospital-alt fa-3x"></i>&nbsp;&nbsp;&nbsp;
+						<i class="fal fa-home fa-3x"></i>&nbsp;&nbsp;&nbsp;
+						<i class="fal fa-industry-alt fa-3x"></i>&nbsp;&nbsp;&nbsp;
+						<i class="fal fa-university fa-3x"></i>
+						<aside class="notes">
+							A content management system is a bit like a building to house your content, in that it's a structure around your content. The structure was created for some purpose, and as such, it has different pieces of infrastructure to make certain things easier. Also like a building, content management systems exist in the context of different communities, which informs how things develop for the system itself. The original purpose of a CMS, just like the original purpose of a building, doesn't always define its current use. WordPress started as a blogging platform, and still does that quite well, but it has evolved into a platform used for all kinds of websites, from company pages to e-commerce sites. When you're looking for a way to put information on the web, you want to look at the structures that a system has to help you do stuff, and at the community of people surrounding it, to see if it's a neighborhood of people with similar or converging goals for their content.
+						</aside>
+					</section>
+					<section>
+						<i class="fal fa-university fa-10x"></i>
+						<aside class="notes">
+							Omeka, as a content management system, was made by and for academics, particularly in libraries, archives and museums. That background and community inform what it does and how it thinks about things. It's built around the idea of collecting various things, which you may want to describe in different ways and contextualize or use as evidence for different narratives.
+						</aside>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Examples</h1>
+						<aside class="notes">
+							So let's talk about some examples of how Omeka has been used in a classroom setting.
+						</aside>
+					</section>
+					<section data-background-image="img/hist1610-essay.png" data-background-size="contain">
+						<aside class="notes">
+							Using Omeka as a home for student essays is a very easy way to shake up the traditional research essay. Students can write a fairly traditional essay in Microsoft Word or whatever they like, and then copy and paste the essay into an Omeka exhibit. It's a very easy process, but it can re-contextualize the essay from something that only the student and their professor and/or TF will ever read to something that exists out in the world with a wider potential audience. It also opens the door for the use of images or other multimedia additions to the essay, which can be a tremendous help in essays like this one on Japanese traditional pottery with deep Korean roots.
+						</aside>
+					</section>
+					<section data-background-image="img/hist1039-gallery.png" data-background-size="contain">
+						<aside class="notes">
+							Another way to use Omeka in the classroom is to use its focus on collections of things as a platform to base other assignments off of. In this class, First Empires: Power and Propaganda in the Ancient World, the instructor curated this collection of objects for the students.
+						</aside>
+					</section>
+					<section data-background-image="img/hist1039-item.png" data-background-size="contain">
+						<aside class="notes">
+							The students were given some basic information about the object, which they then had to use as the basis for their research into the object, and what meaning canbe derived from it.
+						</aside>
+					</section>
+					<section data-background-image="img/hist1039-essay.png" data-background-size="contain">
+						<aside class="notes">
+							These essays also live in the Omeka site, where they can incorporate other images and multimedia elements, and also include direct connections to those original objects.
+						</aside>
+					</section>
+					<section data-background-image="img/hist1039-map.png" data-background-size="contain">
+						<aside class="notes">
+							A side benefit of using Omeka, from this same class, is that once students are already working in the system, they can make use of the additional functionality of its plugins, should they choose. This student used the Neatline mapping plugin to plot out differing interpretations of this eighth campaign of Sargon the second. What would be a somewhat ugly image in a traditional journal is here an interactive experience, where the audience can dig deep into the modern day terrain and see the relationship of the text describing the place to the varying interpretations of place.
+						</aside>
+					</section>
+					<section data-background-image="img/anth1130-items.png" data-background-size="contain">
+						<aside class="notes">
+							Of course, Omeka can be used to collect descriptions of things, a use very much in line with its original purpose. This is from the archaeology of harvard yard, where students dig up the yard in search of its secrets. Here they've collected what they've found with quite a bit of context and narrative. What you can't see, because the collection is private, is that there are nearly two thousand other objects described by the students. These descriptions aren't public-ready, but they have served as a great way to collect metadata about the objects as part of accessioning them in to the museum's collection system.
+						</aside>
+					</section>
+					<section data-background-image="img/battersea.png" data-background-size="contain" data-background-color="#000">
+						<aside class="notes">
+							Here is a very different looking Omeka site, one which is still using the same platform, but which looks very different.
+						</aside>
+					</section>
+					<section data-background-image="img/battersea-item.png" data-background-size="contain" data-background-color="#000">
+						<aside class="notes">
+							You can see that the site is still very much a museum-like experience, in that it collects a variety of things together with some descriptions and other metadata, but everything else has changed pretty dramatically. Now, come with me as I stretch the limits of that building metaphor. There's a show that I watch on Netflix about people who are building their own homes in various interesting ways. (Trust me, this is going somewhere).
+						</aside>
+					</section>
+					<section data-background-image="img/house-old.png" data-background-size="contain" data-background-color="#000">
+						<aside class="notes">
+							One couple bought a rather dull mid-century brick square of a home, and, without fully demolishing it, built up this beautiful, modern home with great glass windows overlooking a nearby park.
+						</aside>
+					</section>
+					<section data-background-image="img/house-new.png" data-background-size="contain" data-background-color="#000">
+						<aside class="notes">
+							But underneath the walls of that new, beautiful house are still the bones of the building; that brick structure is still there beneath the surface.
+						</aside>
+					</section>
+					<section data-background-image="img/battersea.png" data-background-size="contain" data-background-color="#000">
+						<aside class="notes">
+							That's basically what's been done in the case of the Battersea arts archive, the bones of the architecture have been preserved, underneath a fairly extensive facelift. In this case, the core structure is a way of thinking about content and information that focuses on collections of items, and putting them together into galleries and narratives. The point that I want to make here is that there is this potential separation of aesthetic and function that you can undertake with some elbow grease and/or funding for a front-end developer who works with PHP.
+						</aside>
+					</section>
+				</section>
+				<section>
+					<section>
+						<i class="fal fa-university fa-10x"></i>
+						<p>demo.omeka.fas.harvard.edu</p>
+						<aside class="notes">
+							In Omeka, as in a museum, there's a space for people to wander around and explore things, and there's a "backstage", where the magic happens. What you find at that url on the screen is the public, front-facing part of the website. Now, let's go back stage and see how some of it works. You should be able to access that backend through the "Login" link in the nav bar, using your Harvard Key credentials. If not, raise your hand and let us know!
+						</aside>
+					</section>
+					<section>
+						<img src="img/omeka-backend.png" alt="A screenshot of the admin interface of an Omeka website">
+						<aside class="notes">
+							I just want to give you a quick tour of the interface back here before we get into some core functionality. You have this top bar, which has site administration options. You're seeing those because we've given you full access to the site, so you can see what it's like to administer your own Omeka site. On the left, you have different kinds of content to edit. This section will be visible to everyone, although people with limited access may not have all of the options. There are roles that can only view content, roles that can only create their own content, roles that can manage all content, and the role that can do whatever it wants (that's you today!).
+						</aside>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Items</h1>
+						<aside class="notes">
+							Items are the things that you will collect on your site. I'm being intentionally vague with my vocabulary, because you could just as easily have a collection of buildings as you could a collection of paintings or photographs. Anything that you might care to represent digitally can be accommodated, since all you need is a bit of metadata.
+						</aside>
+					</section>
+					<section>
+						<h2>Dublin Core</h2>
+						<table style="font-size:26pt">
+							<tr>
+								<td>Title</td>
+								<td>Subject</td>
+								<td>Description</td>
+								<td>Creator</td>
+								<td>Source</td>
+							</tr>
+							<tr>
+								<td>Publisher</td>
+								<td>Date</td>
+								<td>Contributor</td>
+								<td>Rights</td>
+								<td>Relation</td>
+							</tr>
+							<tr>
+								<td>Format</td>
+								<td>Language</td>
+								<td>Type</td>
+								<td>Identifier</td>
+								<td>Coverage</td>
+							</tr>
+						</table>
+						<aside class="notes">
+							In order to have a setup that can accommodate any kind of "thing" while still having some degree of specificity and interoperability in the metadata used, Omeka uses a metadata standard called Dublin Core. You see here all of the metadata elements that are included in the standard. There are	15 of them, and none of them are required to create an item. Title and description are used frequently by Omeka, though, so it's a good idea to include them. Otherwise, you have a collection of 15 buckets that are general enough for you to put in whatever information you'd like. This generality makes it easier to use Omeka for any kind of material, because you aren't stuck with "author" or "artist", but instead the more general "creator", that can encompass both.
+						</aside>
+					</section>
+					<section>
+						<img src="img/files.png" alt="Screenshot of back-end page to add files to Omeka item">
+						<aside class="notes">
+							Files are also an important part of an Omeka item. Any file type can be added to an Omeka item, as long as the site's security settings have been set up to allow it. Only certain image, video and audio formats will be rendered on the page, all other formats will simply be downloadable.
+						</aside>
+					</section>
+					<section>
+						<h2>Collections</h2>
+						<p>Think boxes of items, described with the same Dublin Core metadata</p>
+						<p>Items can't go in multiple collections</p>
+						<aside class="notes">
+							Colllections are like boxes in an archive. They expect to have a logic to them, a reason to collect them in the same place. Because of this assumption, they have their own Dublin Core metadata that can be assigned. Also, Items can't be placed in multiple collections. They are like physical boxes, in that you can't put the same thing in two different boxes. For a less archival way of associating Items with each other, Omeka also offers a basic tagging system, with fewer descriptions and fewer restrictions.
+						</aside>
+					</section>
+					<section>
+						<h1>Your turn</h1>
+						<p>harvardartmuseums.org</p>
+						<aside class="notes">
+							Now let's make an item or two. Go to harvardartmuseums.org, and check out the exhibit on animal-shaped vessels from the ancient world. Take a look at the items in the collection, find one you like (there are more than seven, just use the arrows to scroll through), and then add it to the Omeka site, with as much metadata and imagery as you care to add.
+						</aside>
+					</section>
+					<section data-background-iframe="https://pollev.com/jeremyg">
+						<aside class="notes">
+							Here I have a poll everywhere poll for you to respond to to let me know how you're doing. So if you're working on adding Omeka items, please respond to the poll to let me know you're still working. If you're done, before you go back to work or chatting with your neighbor, update your response, so I know when to move on. If you run into any issues, just raise your hand and we'll help you out.
+						</aside>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Exhibits</h1>
+						<aside class="notes">
+							Okay, let's move on to another core part of Omeka, the exhibit.
+						</aside>
+					</section>
+					<section>
+						<i class="fal fa-book-heart fa-10x"></i>
+						<aside class="notes">
+							Exhibits are the narratives at the heart of an Omeka site. The items are fascinating on their own, but the exhibits pull together these materials into a narrative, and use them to substantiate that narrative.
+						</aside>
+					</section>
+					<section>
+						<ul>
+							<li class="fragment">Exhibit <sup class="url-aside">(http://base.url/exhibit-name)</sup>
+								<ul>
+									<li class="fragment">Page <sup class="url-aside">(http://base.url/exhibit-name/page1)</sup>
+										<ul>
+											<li class="fragment"><i class="fal fa-align-left"></i>&nbsp; Block</li>
+											<li class="fragment"><i class="fal fa-image"></i>&nbsp; Block</li>
+											<li class="fragment"><i class="fal fa-images"></i>&nbsp; Block</li>
+										</ul>
+									</li>
+									<li class="fragment">Page <sup class="url-aside">(http://base.url/exhibit-name/page2)</sup>
+										<ul>
+											<li><i class="fal fa-align-left"></i>&nbsp; Block</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<aside class="notes">
+							Here's a bit about the structure of an Exhibit. At the top, you have the whole exhibit, which gets its own base url, which usually contains the exhibit's description. Beneath that, we have individual exhibit pages, which also get their own urls. These are the sections of an exhibit, which can be navigated through at the will of the reader. Finally, making up the pages, are the actual blocks of content. These are the bits of styled content, whether they're images, text, or other kinds of content blocks added by plugins. They don't get their own urls, because they're part of each page. You might have a page with some text, an image, and then a gallery of images, or you might have a page that's just a block of text; you can have as many or as few as you like.
+						</aside>
+					</section>
+					<section>
+						<h1>Your turn (again)</h1>
+						<aside class="notes">
+							The best way to cement that idea of how exhibits work is to try it out for yourself. Take your item and put it in an exhibit, with a bit of text about why you chose it to bring in to the site. Go nuts if you want to, but start there. We'll use that same polleverywhere poll to keep track of how everyone's doing, so please update it as you work.
+						</aside>
+					</section>
+					<section data-background-iframe="https://pollev.com/jeremyg"></section>
+				</section>
+				<section>
+					<h1>Extra features</h1>
+					<aside class="notes">
+						There are some additional features of Omeka, added through plugins, which I'll go over now.
+					</aside>
+				</section>
+				<section>
+					<section>
+						<h1>Neatline</h1>
+						<aside class="notes">
+							Neatline is a plugin that lets you create interactive maps, annotated however you like to create a narrative.
+						</aside>
+					</section>
+					<section data-background-iframe="http://dighist.fas.harvard.edu/courses/2016/HIST1039/neatline/fullscreen/the-eighth-campaign-of-sargon-ii" data-background-interactive>
+						<aside class="notes">
+							Let's take a closer look at the map that that student created. We can zoom in and see the different paths, but on the right, we can also look through a translated narrative, annotated with links to the places described. You can also hover over each line, and see the name of the scholar who proposed that route for Sargon the second.
+						</aside>
+					</section>
+					<section data-background-iframe="http://dighist.fas.harvard.edu/projects/beautifulspaces/neatline/fullscreen/coastal" data-background-interactive>
+						<aside class="notes">
+							Here is another map, but you might notice that this one looks a little different. It's not a modern map, and it's not superimposed on the modern landscape, it's just an annotated image. You can do this with any image, making Neatline a viable annotation platform as well. It's worth mentioning that Neatline can do a lot, but it has a kind of clunky interface. It's still one of the best interfaces for creating quick and easy non-linear narrative maps, but that's because there's nothing particularly satisfying out there.
+						</aside>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>IIIF Toolkit</h1>
+						<aside class="notes">
+							The IIIF Toolkit allows you to re-use images from other image hosting systems, like the library here or the Harvard Art Museums.
+						</aside>
+					</section>
+					<section>
+						<img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/International_Image_Interoperability_Framework_logo.png" alt="IIIF Logo">
+						<aside class="notes">
+							So IIIF stands for the International Image Interoperability Framework, and basically its a pretty technical standard for transmitting images. It makes it so that different repositories can speak the same, quite expressive language about their image content. In practical terms, this means that you don't have to re-host images, and you get some really great tiling that allows for zooming, panning, slicing and dicing of images. So not only is it easier to take advantage of the high quality images in archival repositories, but you also get some great features too.
+						</aside>
+					</section>
+					<section>
+						<a href="https://www.harvardartmuseums.org/collections/object/292633"> <img src="https://nrs.harvard.edu/urn-3:HUAM:764516?height=675" alt="Greek eye cup" height="500"></a>
+						<aside class="notes">
+							I'm going to show you how easy it can be to import an image via IIIF into an Omeka site with this plugin enabled, once you're familiar with the process. (if you're just reading these notes, check https://jaguillette.github.io/omekaSugar/tutorial/iiif/2017/08/29/iiif-toolkit.html)
+						</aside>
+					</section>
+				</section>
+				<section data-background-image="https://upload.wikimedia.org/wikipedia/commons/e/ea/Thats_all_folks.svg">
+					<aside class="notes">
+						That's all folks! That's a brief crash course in Omeka. If you're wowed, you can get an Omeka site for your course by filling out the form on the link on the next page.
+					</aside>
+				</section>
+				<section>
+					<i class="fal fa-question fa-10x"></i>
+					<p>atg.fas.harvard.edu/omeka</p>
+					<aside class="notes">
+						So, any questions?
+					</aside>
+				</section>
+			</div>
+		</div>
+		<script src="lib/js/head.min.js" charset="utf-8"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+			// More info https://github.com/hakimel/reveal.js#configuration
+			// Reveal.initialize({
+			// 	controls: true,
+			// 	progress: true,
+			// 	history: true,
+			// 	center: true,
+			//
+			// 	transition: 'slide', // none/fade/slide/convex/concave/zoom
+			//
+			// 	// More info https://github.com/hakimel/reveal.js#dependencies
+			// 	dependencies: [
+			// 		{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			// 		{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			// 		{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			// 		{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			// 		{ src: 'plugin/search/search.js', async: true },
+			// 		{ src: 'plugin/zoom-js/zoom.js', async: true },
+			// 		{ src: 'plugin/notes/notes.js', async: true }
+			// 	]
+			// });
+		</script>
+	</body>
+</html>
